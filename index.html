@@ -191,16 +191,6 @@ $("#selDay").val(day);
 		});
    
    });
-   function showClear()
-			{
-				if (self.name != 'reload') {
-					self.name = 'reload';
-					self.location.reload(true);
-					}
-				else self.name = ''; 
-				//구글링을 통해 코드를 찾았습니다. 
-				//페이지 새로고침 코드
-			}
    </script>
 
 </head>
@@ -271,9 +261,6 @@ $("#selDay").val(day);
 	<div class='cardClear'></div>
 	<div class="box3">
 	<img src="./img/img1.png">
-	</div>
-	<div class="box4">
-	<input id="k" type="button" value="더블클릭시 전체 삭제" onclick="showClear();">
 	</div>
 </div>
 </form>
