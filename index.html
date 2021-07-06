@@ -103,9 +103,14 @@
 	a:link, a:visited {
 				color : black;
 				}
-			a:hover, a:active{
-				color : rgba(0, 0, 255, 0.2);
+	a:hover, a:active{
+				color : rgba(255, 0, 0, 0.2);
 				}
+	#click1{
+		border: 2px solid gray;
+		margin: 10px auto;
+		text-align : center;
+	}
 	p {
 		color : red ;
 	}
@@ -263,6 +268,7 @@ $("#selDay").val(day);
 	<div class="box3">
 	<img src="./img/img1.png">
 	</div>
+	<a id="click1" onClick="window.location.reload()" style="cursor: pointer;">새로고침</a>
 </div>
 </form>
 </body>
