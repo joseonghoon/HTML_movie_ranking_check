@@ -117,6 +117,18 @@
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
    <script>
+var doubleSubmitFlag = false;
+function doubleSubmitCheck(){
+    if(doubleSubmitFlag){
+        return doubleSubmitFlag;
+    }else{
+        doubleSubmitFlag = true;
+        return false;
+    }
+}
+
+
+
  function init(){
    var today=new Date();
    $("#txtYear").val(today.getFullYear());
@@ -164,6 +176,8 @@ $("#selDay").val(day);
 
    
    $("#bt1").click(function(){
+	if(doubleSubmitCheck()) return;
+
    var url="http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml?key=f5eef3421c602c6cb7ea224104795888";
    url= url+"&targetDt="+$("#txtYear").val()+$("#selMon").val()+$("#selDay").val();
    url= url+"&repNationCd="+$("#repNationCd").val();
