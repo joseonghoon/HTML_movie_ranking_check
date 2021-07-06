@@ -70,16 +70,14 @@
 		width : 400px;
 		height : 280px;
 		color : blue;
-		text-align : left;
+		text-align : center;
 		border : 2px double red;
+		font-size: 35px;
 		}
 	img{
 		height : 280px;
 		width : 400px;
 		}
-	.box3 > h1{
-		text-align : center;
-	}
 	#msg {
 		border-radius: 5px;
 		border: 2px solid gray;
@@ -147,7 +145,7 @@ $("#selDay").val(day);
 					dataType : "xml",
 					success : function(data){
 						var str ="";
-						str = str + "<h1>"+$(data).find("movieNm").text() + "</h1><br>";
+						str = str +"<" +$(data).find("movieNm").text() +">"+ "<br><br>";
 						str = str +"장르: "+ $(data).find("genreNm").text()+"<br>";
 						str = str +"관람 등급: "+ $(data).find("watchGradeNm").text()+"<br>";
 						str = str +"감독: "+ $(data).find("directors").text()+"<br>";
